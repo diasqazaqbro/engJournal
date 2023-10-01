@@ -1,3 +1,4 @@
+import LayoutNav from '@/widgets/LayoutNav/ui/LayoutNav'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './style/adaptive.sass'
@@ -21,7 +22,15 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={montserrat.className}>{children}</body>
+			<body className={montserrat.className}>
+				<main className='layout'>
+					<div className='sidebar'>
+						<LayoutNav />
+					</div>
+					<div className='main'>{children}</div>
+					<div className='footer'></div>
+				</main>
+			</body>
 		</html>
 	)
 }

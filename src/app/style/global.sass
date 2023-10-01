@@ -45,6 +45,8 @@ body
 	line-height: 1.65
 	overflow-x: hidden
 	opacity: 1
+	color: white
+	background: #191919
 
 img
 	max-width: 100%
@@ -53,3 +55,17 @@ img
 	display: block
 	max-width: 100%
 	height: auto
+
+.layout
+	display: grid
+	grid-template-areas: "sidebar main " "sidebar footer"
+	grid-template-columns: 25% 75%
+	height: 100%w
+
+	.main
+		grid-area: 'main'
+	.sidebar
+		grid-area: 'sidebar'
+
+	.footer
+		grid-area: 'footer'
